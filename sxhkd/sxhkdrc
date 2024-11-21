@@ -1,0 +1,50 @@
+# Main Programs
+
+# Terminal
+super + t
+	kitty
+
+# Browser
+super + b
+	firefox
+
+# Rofi
+super + d
+	rofi -show drun -show-icons
+
+super + x
+	~/.config/rofi/rofi-sysVinit-powermenu.sh
+
+# Scrot
+super + shift + s
+  scrot -s $HOME/Pictures/Snips/'snip_%m-%d-%Y_%H-%M-%S.png'
+
+###################
+# Window commands #
+###################
+
+# Close Window
+super + q
+	bspc node -c
+	
+# Kill Window
+super + shift + q
+	bspc node -k
+
+# Toggle between tiled and floating
+super + shift + t
+	bspc node -t {tiled,floating}
+
+# Fullscreen
+super + shift + f
+	bspc node -t {fullscreen,tiled}
+
+# Move the focused window to the next desktop
+super + shift + {1-9}
+    bspc node -d '^{1-9}'
+    
+# Switch to desktop {1-9}
+super + {1-9}
+    bspc desktop -f '^{1-9}'
+
+
